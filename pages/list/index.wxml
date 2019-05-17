@@ -1,0 +1,17 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="filter">
+    <view class="">
+      <text class="t-default fs-16">赛事等级：</text>
+      <block wx:for="{{levels}}" wx:key="index">
+        <text class="filter-item">{{item}}</text>
+      </block>
+    </view>
+    <view class="">
+      <text class="t-default fs-16">赛事等级：</text>
+      <block wx:for="{{types}}" wx:key="index">
+        <text class="filter-item {{index==active?'filter-item-active':''}}">{{item}}</text>
+      </block>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,42 @@
+/**app.wxss**/
+/* .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}  */
+
+page{
+  width: 100%;
+  height: 100%;
+}
+
+.t-default {
+  color: #999;
+  font-size: 12px;
+}
+.t-small {
+  color: #111;
+  font-size: 12px;
+}
+
+.t-warn {
+  font-size: 14px;
+  color: #f60;
+  letter-spacing: 2rpx;
+}
+.fs-16{
+  font-size: 16px;
+}
+.filter-item {
+  padding: 0 20rpx;
+  margin: 0 10rpx;
+  border-radius: 10rpx;
+  display: inline-block;
+}
+.filter-item-active{
+  
+}

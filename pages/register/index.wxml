@@ -1,0 +1,60 @@
+<!-- pages/login/account/index.wxml -->
+<view class="page">
+  <view class="welcome">
+    <view class="title">
+      <text class="text">欢迎来到xxx系统</text>
+      {{ account }}
+    </view>
+  </view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">账户名</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input"
+               bindblur="onblur"
+               data-label="account"
+               placeholder="请输入邮箱" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">密码</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input"
+               bindblur="onblur"
+               data-label="pwd"
+               type="password" 
+               placeholder="请输入密码" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">确认密码</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input"
+               bindblur="onblur"
+               data-label="pwd1"
+               type="password" 
+               placeholder="请再次输入密码" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">电话号码</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input"
+               bindblur="onblur"
+               data-label="phone"
+               placeholder="请输入电话号码" />
+      </view>
+    </view>
+  </view>
+  <view class="weui-btn-area">
+    <button class="weui-btn" type="primary" bindtap="nextStep">注册</button>
+  </view>
+</view>

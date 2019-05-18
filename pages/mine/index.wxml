@@ -1,2 +1,55 @@
-<!--pages/mine/index.wxml-->
-<text>pages/mine/index.wxml</text>
+<!-- pages/mine/index.wxml -->
+<view class="mine">
+  <view class="mine-info">
+    <view class="avatar">
+      <image src="/img/avatar.jpeg" class="avatar-img" />
+    </view>
+    <view class="mi-detail">
+      <view class="info">
+        <view class="t-default fs-12">
+          姓名：
+          <text class="fs-12 t-normal">{{user.name}}</text>
+        </view>
+        <view class="t-default fs-12">
+          性别：
+          <text class="fs-12 t-normal">{{user.sex == 'male' ? '男' : '女'}}</text>
+        </view>
+      </view>
+      <view class="info">
+        <view class="t-default fs-12">
+          年级：
+          <text class="fs-12 t-normal">{{user.grade}}</text>
+        </view>
+        <view class="t-default fs-12">
+          学号：
+          <text class="fs-12 t-normal">{{user.num}}</text>
+        </view>
+      </view>
+      <view class="info">
+        <view class="t-default fs-12">
+          学校：
+          <text class="fs-12 t-normal">{{user.school}}</text>
+        </view>
+      </view>
+      <view class="info">
+        <view class="t-default fs-12">
+          专业：
+          <text class="fs-12 t-normal">{{user.major}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="about">
+    <block wx:for="{{list}}" wx:key="index">
+      <view class="about-item">
+        <view class="item">
+          <image src="{{item.icon}}" class="item-icon" />
+          <text class="title">{{item.title}}</text>
+        </view>
+        <view class="more">
+          <image src="/img/mine/arrow.png" class="item-icon" />
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

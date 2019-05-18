@@ -31,8 +31,7 @@ Page({
    */
   onLoad: function (options) {
     wx.request({
-      url: "localhost:9009/test",
-      
+      url: "http://localhost:9009/test",
       success(res){
         console.log(res)
       }

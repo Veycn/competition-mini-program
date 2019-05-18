@@ -1,26 +1,11 @@
-// pages/mine/index.js
+// pages/login/info/index.js
 Page({
 
   /**
    * Page initial data
    */
   data: {
-    list: [
-      {icon: '/img/mine/myc.png', title: '我的比赛'},
-      {icon: '/img/mine/team.png', title: '我的队伍'},
-      {icon: '/img/mine/add.png', title: '寻找队友'},
-      {icon: '/img/mine/want.png', title: '个人意向'},
-      {icon: '/img/mine/want.png', title: '联系我们'},
-      {icon: '/img/mine/want.png', title: '意见反馈'},
-    ],
-    user: {
-      name: '杨小平',
-      sex: 'male',
-      num: 2016211624,
-      grade: '2016',
-      school: '重庆邮电大学',
-      major: '智能科学与技术'
-    }
+
   },
 
   /**

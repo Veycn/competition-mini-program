@@ -1,11 +1,14 @@
 {
   "pages": [
-    "pages/list/index",
+    "pages/main/index",
     "pages/index/index",
-    "pages/logs/logs",
     "pages/mine/index",
-    "pages/message/index"
-    
+    "pages/login/index",
+    "pages/register/index",
+    "pages/list/index",
+    "pages/logs/logs",
+    "pages/message/index",
+    "pages/info/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -19,7 +22,7 @@
     "selectedColor": "#1296db",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/main/index",
         "text": "首页",
         "iconPath": "img/public/home.png",
         "selectedIconPath": "img/public/home_select.png"

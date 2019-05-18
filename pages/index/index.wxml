@@ -1,69 +1,8 @@
-<!-- index.wxml -->
-<view class="container">
-  <view class="swiper-wrapper">
-    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{true}}}">
-      <block wx:for="{{imgUrls}}" wx:key="index">
-        <swiper-item>
-          <image src="{{item}}" class="slide-image" width="355" height="150" />
-        </swiper-item>
-      </block>
-    </swiper>
-  </view>
-  <view class="selection">
-    <view class="row">
-      <view class="item">
-        <image src="/img/public/comp.png" class="icon"/>
-        <text class="text">发现赛事</text>
-      </view>
-      <view class="item">
-        <image src="/img/public/add.png" class="icon"/>
-        <text class="text">我的团队</text>
-      </view>
-    </view>
-    <view class="row">
-      <view class="item">
-        <image src="/img/public/list.png" class="icon"/>
-        <text class="text">我的大赛</text>
-      </view>
-      <view class="item">
-        <image src="/img/public/learn.png" class="icon"/>
-        <text class="text">学习充电</text>
-      </view>
-    </view>
-  </view>
-  <view class="content">
-    <view class="title">
-      <text class="header">最近赛事</text>
-    </view>
-    <view class="content-wrapper">
-      <block wx:for="{{4}}" wx:key="index">
-        <view class="content-item" bindtap="jumpToDetail" url="">
-          <view class="">
-            <image src="/img/public/cup.png" class="c-img" />
-          </view>
-          <view class="overview">
-            <view class="c-header">
-              <text class="short-call">未来杯</text>
-            </view>
-            <view class="type">
-              <view class="c-info">
-                <text class="t-default">赛事类型：</text>
-                <text class="t-small">工程机械， 计算机， 编程</text>
-              </view>
-              <view class="time">
-                <view>
-                  <text class="t-default">开始报名：</text>
-                  <text class="t-warn">2019.05.13-12:00</text>
-                </view>
-                <view>
-                  <text class="t-default">报名截止：</text>
-                  <text class="t-warn">2019.05.31-00:00</text>
-                </view>
-              </view>
-            </view>
-          </view>
-        </view>
-      </block>
-    </view>
-  </view>
-</view>
+<!-- 
+  此页面为过渡页面，启动小程序时， 在此页面的生命周期中， 
+  判断本地是否存储有用户的登陆信息， 
+  如果有， 跳转首页
+  如果没有， 跳转至登陆页面
+ -->
+
+<view class="loading"></view>

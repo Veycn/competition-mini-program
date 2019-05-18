@@ -14,13 +14,22 @@ page{
   height: 100%;
 }
 
+@import 'weui.wxss';
+
+
+
 .t-default {
   color: #999;
+  line-height: 1;
   font-size: 12px;
 }
 .t-small {
   color: #111;
   font-size: 12px;
+}
+
+.t-normal{
+  color: #555;
 }
 
 .t-warn {
@@ -31,11 +40,22 @@ page{
 .fs-16{
   font-size: 16px;
 }
+.fs-12{
+  font-size: 12px;
+  line-height: 1;
+}
+
 .filter-item {
   padding: 0 20rpx;
   margin: 0 10rpx;
   border-radius: 10rpx;
   display: inline-block;
+}
+.item-icon{
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: top;
+  margin-right: 15rpx;
 }
 .filter-item-active{
   

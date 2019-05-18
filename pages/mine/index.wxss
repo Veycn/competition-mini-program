@@ -1,1 +1,50 @@
 /* pages/mine/index.wxss */
+
+.mine-info{
+  display: flex;
+  flex-direction: row;
+  padding: 15rpx;
+}
+.mine-info > .avatar{
+  width: 200rpx;
+  height: 200rpx;
+}
+.mine-info > .avatar > .avatar-img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+}
+.mi-detail {
+  padding: 25rpx 0 25rpx 20rpx;
+  flex: 1;
+}
+
+.info{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15rpx;
+}
+.info > view{
+  flex: 1;
+}
+
+
+.about {
+  /* margin-top: 20rpx; */
+  border-top: 1rpx solid #eee;
+}
+.about-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+.about-item > view{
+  padding: 20rpx 30rpx;
+  
+}
+
+.item > .title{
+  color: #555;
+}

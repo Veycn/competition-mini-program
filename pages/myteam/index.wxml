@@ -16,7 +16,7 @@
         </view>
         <block wx:if="{{isCaptain}}">
           <view class="btn" catchtap="doSomething" data-index="{{index}}" data-tag="captain" data-id="{{item.id}}">
-            <text class="nor" wx:if="{{item.id==id}}">退出</text>
+            <text class="nor" wx:if="{{item.id==id}}">队长</text>
             <text class="del" wx:else>踢出</text>
           </view>
         </block>

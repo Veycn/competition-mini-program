@@ -11,7 +11,7 @@
       </block>
     </view>
     <view class="">
-      <text class="t-default fs-16">赛事等级：</text>
+      <text class="t-default fs-16">赛事类型：</text>
       <block wx:for="{{types}}" wx:key="index">
         <text class="filter-item {{index==active?'filter-item-active':''}}"
               bindtap="changeClass"

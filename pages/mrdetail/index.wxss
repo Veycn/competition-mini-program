@@ -1,0 +1,63 @@
+/* pages/detail/index.wxss */
+
+
+.banner{
+  width: 100%;
+}
+.banner > .img{
+  width: 100%;
+}
+
+.content{
+  
+}
+
+.content > .desc {
+  padding: 15rpx;
+  box-sizing: border-box;
+}
+.desc > .subhead{
+  color: #555;
+}
+
+
+
+
+
+
+.control{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 15rpx 45rpx;
+  border-top: 1rpx solid #ccc;
+}
+.control > .btn, .control > .tbtn{
+  width: 660rpx;
+  height: 70rpx;
+}
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ccb458;
+  background: #111;
+}
+.tbtn {
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.tbtn > .sub {
+  width: 300rpx;
+  height: 100%;
+  text-align: center;
+  background: #111;
+  color: #ccb458;
+  border-radius: 10rpx;
+}
+.btn:nth-child(1){
+  margin-bottom: 15rpx;
+}

@@ -1,2 +1,27 @@
-<!--pages/applylist/index.wxml-->
-<text>pages/applylist/index.wxml</text>
+<!-- pages/applylist/index.wxml -->
+<view class="applylist">
+  <v-notice catchcloseNotice="closeNotice" wx:if="{{applylist.length && isNoticeShow}}"></v-notice>
+  <view class="list-wrapper" wx:if="{{applylist.length}}">
+    <block wx:for="{{applylist}}" wx:key="index">
+      <view class="list-item" catchtap="showInfo" data-index="{{index}}">
+        <view class="avatar-wrapper">
+          <image src="{{item.avatar}}" class="avatar" />
+        </view>
+        <view class="info">
+          <view class="a tn">{{item.tname}}</view>
+          <view class="a name fs">{{item.major}}</view>
+          <view class="a ng fs">{{item.name}} {{item.grade}}</view>
+        </view>
+        <view class="control">
+          <view class="btn" catchtap="agreeJoin" data-index="{{index}}">同意</view>
+          <view class="btn" catchtap="ignoreThis" data-index="{{index}}">忽略</view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="none" wx:else>
+    <image src="/img/public/none.png" class="none-img"/>
+    <view class="tips">您来到了没有队友的遗弃之地～</view>
+    <view class="tr" catchtap="toRecruit">去发布招募信息</view>
+  </view>
+</view>

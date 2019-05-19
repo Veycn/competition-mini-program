@@ -1,0 +1,88 @@
+<!-- pages/myinfo/index.wxml -->
+<view class="myinfo">
+  <!-- <view class="avatar">
+    <image src="{{userinfo.avatar}}" class="img" />
+  </view> -->
+  <view class="info-wrapper">
+    <view class="head">
+      <text class="t">基本信息</text>
+    </view>
+    <view class="item-row">
+      <view class="item">
+        <text class="title">姓名：</text>
+        <text class="msg">{{userinfo.name}}</text>
+      </view>
+      <view class="item">
+        <text class="title">性别：</text>
+        <text class="msg">{{userinfo.sex}}</text>
+      </view>
+    </view>
+    <view class="item-row">
+      <view class="item">
+        <text class="title">学校：</text>
+        <text class="msg">{{userinfo.school}}</text>
+      </view>
+      <view class="item">
+        <text class="title">年级：</text>
+        <text class="msg">{{userinfo.grade}}</text>
+      </view>
+    </view>
+    <view class="item-row">
+      <view class="item">
+        <text class="title">专业：</text>
+        <text class="msg">{{userinfo.major}}</text>
+      </view>
+      <view class="item">
+        <text class="title">学号：</text>
+        <text class="msg">{{userinfo.num}}</text>
+      </view>
+    </view>
+    <view class="item-row">
+      <view class="item">
+        <text class="title">电话：</text>
+        <text class="msg">{{userinfo.phone}}</text>
+      </view>
+      <view class="item">
+        <text class="title">QQ：</text>
+        <text class="msg">{{userinfo.qq}}</text>
+      </view>
+    </view>
+    <v-btnl text="修改基本信息" catchtap="showInfoToast" data-tag="info" />
+  </view>
+  <view class="tags-wrapper">
+    <view class="head">
+      <text class="t">我的标签云</text>
+    </view>
+    <view class="tags">
+      <text class="tag" wx:for="{{tags}}" wx:key="{{index}}">{{item}}</text>
+    </view>
+    <v-btnl text="修改标签云" catchtap="showInfoToast" data-tag="tag" />
+  </view>
+  <v-toast title="修改个人信息" class="info-toast" height="{{820}}" catchtoastClose="toastClose" wx:if="{{isInfoToastShow}}">
+    <block wx:if="{{activeTag == 1}}">
+      <view class="m-wrapper">
+        <view class="modify">
+          <view class="item" wx:for="{{userinfo}}" wx:key="index" hidden="{{index == 'avatar'}}">
+            <text class="title">{{reflect[index]}}：</text>
+            <input class="ipt" type="text" placeholder="{{reflect[index]}}" value="{{item}}" bindinput="onFormInput" data-item="{{index}}" />
+          </view>
+        </view>
+        <v-btnl text="提交修改" catchtap="submitChange" />
+      </view>
+    </block>
+    <block wx:else>
+      <view class="modify-tag">
+        <view class="modify">
+          <textarea class="ipt" bindblur="tagInput" value="{{m.format(tags)}}"></textarea>
+        </view>
+        <v-btnl text="提交修改" catchtap="submitChange" />
+      </view>
+    </block>
+  </v-toast>
+</view>
+<wxs module='m'>
+  var format = function(tags){
+    return tags.join(',')
+  }
+  module.exports.format = format
+</wxs>

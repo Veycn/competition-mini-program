@@ -1,1 +1,39 @@
 /* components/notice/comp.wxss */
+.wrapper{
+  width: 100%;
+  height: 65rpx;
+  position: relative;
+  background: #f8f8f8;
+}
+
+.text-wrapper{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  padding: 0 80rpx;
+  text-align: center;
+  color: #666;
+}
+.text-wrapper {
+  font-size: 32rpx;
+  line-height: 65rpx;
+}
+.img-icon > .icon{
+  width: 65rpx;
+  height: 65rpx;
+  display: inline-block;
+}
+
+.img-icon {
+  position: absolute;
+  line-height: 1;
+  background: transparent;
+}
+.close {
+  right: 0;
+}
+.notice {
+  left: 0;
+}

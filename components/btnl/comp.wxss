@@ -1,0 +1,19 @@
+/* components/btnl/comp.wxss */
+.control{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15rpx 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: #fff; */
+}
+.control > .btn {
+  width: 650rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background: #111;
+  color: #ccb458;
+  border-radius: 10rpx;
+}

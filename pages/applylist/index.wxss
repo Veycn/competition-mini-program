@@ -1,1 +1,94 @@
 /* pages/applylist/index.wxss */
+
+.applylist{
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2;
+}
+.list-item{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10rpx 15rpx 0 15rpx;
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  margin: 10rpx 0;
+}
+.list-item > .avatar-wrapper{
+  width: 150rpx;
+}
+
+.list-wrapper {
+  width: 100%;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+.avatar-wrapper > .avatar {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+}
+
+.info{
+  flex: 1;
+  box-sizing: border-box;
+  padding: 0 30rpx 10rpx 30rpx;
+}
+.info > .a{
+  line-height: 1;
+}
+.info > .tn {
+  text-shadow: 0 0 4rpx #333;
+  line-height: 58rpx;
+}
+.info > .name{
+}
+.info > .ng{
+
+}
+.info > .fs{
+  color: #333;
+  font-size: 30rpx;
+  line-height: 45rpx;
+}
+
+
+.control {
+  width: 180rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.control > .btn {
+  background: #111;
+  color: #ccb458;
+  padding: 0 20rpx;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+}
+
+.none {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding-top: 200rpx; 
+}
+
+.none > .none-img{
+  width: 200rpx;
+  height: 200rpx;
+}
+.none > .tips {
+  color: #666;
+  line-height: 100rpx;
+}
+.none > .tr {
+  margin-top: 30rpx;
+  background: #111;
+  padding: 8rpx 20rpx;
+  border-radius: 10rpx;
+  color: #ccb458;
+}

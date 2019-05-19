@@ -5,9 +5,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    list: [
+      { imgUrl: '/img/public/cup.png', title: '华为杯', startTime: '2019.05.11-12:00', endTime: '2019.05.11-12:00', types: '工程机械， 计算机， 编程', id: '1234534' },
+      { imgUrl: '/img/public/cup.png', title: '未来杯', startTime: '2019.05.11-12:00', endTime: '2019.05.11-12:00', types: '工程机械， 计算机， 编程', id: '1234534' },
+      { imgUrl: '/img/public/cup.png', title: '挑战杯', startTime: '2019.05.11-12:00', endTime: '2019.05.11-12:00', types: '工程机械， 计算机， 编程', id: '1234534' },
+      { imgUrl: '/img/public/cup.png', title: '数模大赛', startTime: '2019.05.11-12:00', endTime: '2019.05.11-12:00', types: '工程机械， 计算机， 编程', id: '1234534' },
+      { imgUrl: '/img/public/cup.png', title: 'ACM编程大赛', startTime: '2019.05.11-12:00', endTime: '2019.05.11-12:00', types: '工程机械， 计算机， 编程', id: '1234534' },
+      { imgUrl: '/img/public/cup.png', title: 'ACM编程大赛', startTime: '2019.05.11-12:00', endTime: '2019.05.11-12:00', types: '工程机械， 计算机， 编程', id: '1234534' },
+      { imgUrl: '/img/public/cup.png', title: 'ACM编程大赛', startTime: '2019.05.11-12:00', endTime: '2019.05.11-12:00', types: '工程机械， 计算机， 编程', id: '1234534' },
+      { imgUrl: '/img/public/cup.png', title: 'ACM编程大赛', startTime: '2019.05.11-12:00', endTime: '2019.05.11-12:00', types: '工程机械， 计算机， 编程', id: '1234534' },
+    ],
   },
 
+  toRace() {
+    wx.navigateTo({ url: `/pages/list/index` })
+  },
+  jumpDetail(e){
+    let id = e.currentTarget.dataset.id
+    console.log(id)
+    wx.navigateTo({url:`/pages/mrdetail/index?raceid=${id}`})
+  },
   /**
    * 生命周期函数--监听页面加载
    */

@@ -1,2 +1,12 @@
 <!--components/notice/comp.wxml-->
-<text>components/notice/comp.wxml</text>
+<view class="wrapper">
+  <view class="img-icon notice">
+    <image class="icon" src="/img/public/notice.png"/>
+  </view>
+  <view class="text-wrapper">
+    <text class="text">{{notice}}</text>
+  </view>
+  <view class="img-icon close" catchtap="closeNotice">
+    <image class="icon" src="/img/public/close.png"/>
+  </view>
+</view>

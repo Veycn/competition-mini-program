@@ -2,6 +2,7 @@
 <view class="toast">
   <view class="toast-content" style="height: {{height ? height + 'rpx' : '500rpx'}}">
     <view class="tc-close" bindtap="onClose">
+      <text class="desc">{{title}}</text>
       <image src="/img/public/close.png" class="icon" />
     </view>
     <view class="tc-main">

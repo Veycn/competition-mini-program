@@ -7,6 +7,7 @@ Page({
   data: {
     list: [
       {icon: '/img/mine/myc.png', title: '我的比赛', url: 'myrace'},
+      {icon: '/img/mine/myc.png', title: '修改信息', url: 'myinfo'},
       {icon: '/img/mine/team.png', title: '我的队伍', url: 'myteam'},
       {icon: '/img/mine/add.png', title: '寻找队友', url: 'message'},
       {icon: '/img/mine/want.png', title: '个人意向', url: '??'},

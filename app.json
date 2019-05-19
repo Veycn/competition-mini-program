@@ -1,22 +1,25 @@
 {
   "pages": [
-    "pages/myteam/index",
-    "pages/message/index",
-    "pages/detail/index",
-    "pages/list/index",
-    "pages/main/index",
-    "pages/index/index",
     "pages/mine/index",
+    "pages/detail/index",
+    "pages/mrdetail/index",
+    "pages/message/index",
+    "pages/myrace/index",
+    "pages/applylist/index",
+    "pages/main/index",
+    "pages/myteam/index",
+    "pages/list/index",
+    "pages/index/index",
     "pages/login/index",
     "pages/register/index",
     "pages/logs/logs",
     "pages/info/index",
     "pages/search/index",
-    "pages/myrace/index",
     "pages/memberinfo/index",
     "pages/contact/index",
     "pages/feedback/index",
-    "pages/applylist/index"
+    "pages/learn/index",
+    "pages/myinfo/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

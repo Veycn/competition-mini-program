@@ -5,7 +5,11 @@ Component({
    */
   properties: {
     // 指定弹窗的高度
-    height: Number
+    height: {
+      type: Number,
+      default: 400
+    },
+    title: String
   },
 
   /**

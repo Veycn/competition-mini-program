@@ -1,0 +1,6 @@
+<!--components/btnl/comp.wxml-->
+<view class="myrace">
+  <view class="control">
+    <view class="btn">{{text}}</view>
+  </view>
+</view>

@@ -1,0 +1,27 @@
+<!--pages/detail/index.wxml-->
+<view class="detail">
+  <view class="banner">
+    <image src="/img/public/cup.png" mode="widthFix" class="img"/>
+  </view>
+  <view class="content">
+    <view class="desc">
+      <view class="title"><text ></text></view>
+      <view class="subhead">主办单位：<text ></text></view>
+      <view class="subhead">承办单位：<text ></text></view>
+      <view class="subhead">决赛会场：<text ></text></view>
+      <view class="subhead">报名时间：<text ></text></view>
+      <view class="subhead">报名截止：<text ></text></view>
+      <view class="subhead">初赛时间：<text ></text></view>
+      <view class="subhead">决赛时间：<text ></text></view>
+      <view class="subhead">参赛要求：<text >详见附件。</text></view>
+    </view>
+    <view class="file"></view>
+  </view>
+  <view class="control">
+    <button class="btn" bindtap="download"><text >下载文件</text></button>
+    <view class="tbtn" bindtap="addItem">
+      <view class="sub" catchtap="createTeam">创建队伍</view>
+      <view class="sub" catchtap="lookforTeam">寻找队伍</view>
+    </view>
+  </view>
+</view>

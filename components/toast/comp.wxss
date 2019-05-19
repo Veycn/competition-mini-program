@@ -27,6 +27,11 @@
   position: absolute;
   right: 15rpx;
 }
+.tc-close > .desc{
+  color: #666;
+  font-size: 32rpx;
+  margin-left: 30rpx;
+}
 .tc-main{
   width: 100%;
   box-sizing: border-box;

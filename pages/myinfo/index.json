@@ -1,6 +1,6 @@
 {
   "usingComponents": {
     "v-btnl": "/components/btnl/comp",
-    "v-list": "/components/list/comp"
+    "v-toast": "/components/toast/comp"
   }
 }

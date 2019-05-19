@@ -1,2 +1,12 @@
-<!--pages/myrace/index.wxml-->
-<text>pages/myrace/index.wxml</text>
+<!-- pages/myrace/index.wxml -->
+<view class="myrace">
+  <view class="header">
+    <text class="title">我参加的比赛</text>
+  </view>
+  <view class="race-wrapper">
+    <block wx:for="{{list}}" wx:key="{{index}}">
+      <v-list item="{{item}}" catchtap="jumpDetail" data-id="{{item.id}}"></v-list>
+    </block>
+  </view>
+  <v-btnl class="btn" text="{{'去选择比赛参加'}}" catchtap="toRace"></v-btnl>
+</view>

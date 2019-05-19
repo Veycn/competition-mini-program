@@ -9,7 +9,8 @@
 }
 
 .content{
-  
+  box-sizing: border-box;
+  padding: 10rpx;
 }
 
 .content > .desc {
@@ -19,11 +20,6 @@
 .desc > .subhead{
   color: #555;
 }
-
-
-
-
-
 
 .control{
   position: fixed;

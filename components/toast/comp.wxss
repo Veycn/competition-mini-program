@@ -1,0 +1,34 @@
+/* components/toast/comp.wxss */
+.toast{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .6);
+  z-index: 1000;
+  box-sizing: border-box;
+  padding: 0 15rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toast-content{
+  width: 720rpx;
+  background: #fff;
+  border-radius: 10rpx;
+}
+.toast-content > .tc-close {
+  width: 100%;
+  height: 60rpx;
+  position: relative;
+  margin-top: 15rpx;
+}
+.tc-close > .icon{
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  right: 15rpx;
+}
+.tc-main{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10rpx;
+}

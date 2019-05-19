@@ -1,1 +1,37 @@
 /* pages/list/index.wxss */
+page{
+  background: #f0f2f5;
+}
+.container {
+  width: 100%;
+  height: 100%;
+}
+.filter{
+  background: #fff;
+  margin-bottom: 12rpx;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+.search{
+  width: 730rpx;
+  height: 60rpx;
+  margin-top: 255rpx;
+  margin-left: 10rpx;
+  text-align: center;
+  background: #fff;
+  border-radius: 10rpx;
+}
+.inner > .item-icon{
+  position: relative;
+  top: 6rpx;
+}
+
+.list{
+  width: 100%;
+  margin-top: 15rpx;
+  box-sizing: border-box;
+  padding: 15rpx;
+  background: #fff;
+}

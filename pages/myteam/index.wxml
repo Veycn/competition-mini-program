@@ -1,0 +1,40 @@
+<!-- pages/myteam/index.wxml -->
+<view class="myteam">
+  <view class="team">
+    <view class="team-name">
+      <text class="tn">我来当分母</text>
+      小队
+    </view>
+  </view>
+  <view class="member-list">
+    <block wx:for="{{teamer}}" wx:key="index">
+      <view class="item" bindtap="showInfo" data-index="{{index}}">
+        <image src="{{item.avatar}}" class="info avatar" />
+        <view class="name-qq">
+          <text class="info name">{{item.name}}</text>
+          <text class="info qq">QQ: <text class="info qq">{{item.qq}}</text></text>
+        </view>
+        <block wx:if="{{isCaptain}}">
+          <view class="btn" catchtap="doSomething" data-index="{{index}}" data-tag="captain" data-id="{{item.id}}">
+            <text class="nor" wx:if="{{item.id==id}}">退出</text>
+            <text class="del" wx:else>踢出</text>
+          </view>
+        </block>
+        <block wx:else>
+          <view class="btn" catchtap="doSomething" data-index="{{index}}" data-tag="member" data-id="{{item.id}}">
+            <text class="del" wx:if="{{item.id==id}}">退出</text>
+            <text class="nor" wx:else>查看</text>
+          </view>
+        </block>
+      </view>
+    </block>
+  </view>
+  <view class="modify">
+    <view class="btn-b" bindtap="toRecruit">
+      <text>招募信息</text>
+    </view>
+    <view class="btn-b" bindtap="applyList" wx:if="{{isCaptain}}">
+      <text>申请列表</text>
+    </view>
+  </view>
+</view>

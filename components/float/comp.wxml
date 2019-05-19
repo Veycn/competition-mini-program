@@ -1,0 +1,4 @@
+<!--components/float/comp.wxml-->
+<view class="wrapper">
+  <image src="/img/public/_add.png" class="img" />
+</view>

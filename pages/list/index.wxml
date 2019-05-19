@@ -4,14 +4,31 @@
     <view class="">
       <text class="t-default fs-16">赛事等级：</text>
       <block wx:for="{{levels}}" wx:key="index">
-        <text class="filter-item">{{item}}</text>
+        <text class="filter-item {{index==active1?'filter-item-active':''}}"
+              bindtap="changeClass"
+              data-tag="level"
+              data-index="{{index}}">{{item}}</text>
       </block>
     </view>
     <view class="">
       <text class="t-default fs-16">赛事等级：</text>
       <block wx:for="{{types}}" wx:key="index">
-        <text class="filter-item {{index==active?'filter-item-active':''}}">{{item}}</text>
+        <text class="filter-item {{index==active?'filter-item-active':''}}"
+              bindtap="changeClass"
+              data-tag="type"
+              data-index="{{index}}">{{item}}</text>
       </block>
     </view>
+  </view>
+  <view class="search">
+    <view class="inner" bindtap="jumpPage" data-url="search">
+      <image src="/img/public/sousuo.png" class="item-icon"/>
+      <text class="t-normal fs-14">搜索</text>
+    </view>
+  </view>
+  <view class="list">
+    <block wx:for="{{list}}" wx:key="index">
+      <v-list item="{{item}}" />
+    </block>
   </view>
 </view>

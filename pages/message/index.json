@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "v-float": "/components/float/comp",
+    "v-toast": "/components/toast/comp"
+  }
 }

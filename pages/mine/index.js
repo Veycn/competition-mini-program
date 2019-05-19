@@ -6,12 +6,12 @@ Page({
    */
   data: {
     list: [
-      {icon: '/img/mine/myc.png', title: '我的比赛'},
-      {icon: '/img/mine/team.png', title: '我的队伍'},
-      {icon: '/img/mine/add.png', title: '寻找队友'},
-      {icon: '/img/mine/want.png', title: '个人意向'},
-      {icon: '/img/mine/want.png', title: '联系我们'},
-      {icon: '/img/mine/want.png', title: '意见反馈'},
+      {icon: '/img/mine/myc.png', title: '我的比赛', url: 'myrace'},
+      {icon: '/img/mine/team.png', title: '我的队伍', url: 'myteam'},
+      {icon: '/img/mine/add.png', title: '寻找队友', url: 'message'},
+      {icon: '/img/mine/want.png', title: '个人意向', url: '??'},
+      {icon: '/img/mine/want.png', title: '联系我们', url: 'contact'},
+      {icon: '/img/mine/want.png', title: '意见反馈', url: 'feedback'},
     ],
     user: {
       name: '杨小平',
@@ -23,6 +23,14 @@ Page({
     }
   },
 
+  jumpPage(e){
+    let url = e.currentTarget.dataset.url
+    if(url == 'message'){
+      wx.switchTab({url: `/pages/${url}/index`})
+      return
+    }
+    wx.navigateTo({url: `/pages/${url}/index`})
+  },
   /**
    * Lifecycle function--Called when page load
    */

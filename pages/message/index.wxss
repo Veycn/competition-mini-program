@@ -1,1 +1,50 @@
 /* pages/message/index.wxss */
+page,
+.page,
+.page__bd{
+    height: 100%;
+}
+.page__bd{
+    padding-bottom: 0;
+}
+.weui-tab__content{
+    padding-top: 60px;
+    text-align: center;
+}
+.active > .weui-navbar__title{
+  color: #ccb458;
+}
+.weui-navbar__item{
+  padding: 6rpx 0;
+}
+.weui-tab__panel{
+  padding-top: 60rpx;
+}
+.weui-tab__content{
+  box-sizing: border-box;
+  padding: 20rpx 15rpx 0;
+  text-align: initial;
+  width: 100%;
+  height: 100%;
+}
+
+.find-member, .find-team{
+  width: 100%;
+  height: 100%;
+}
+.float{
+  position: absolute;
+  display: block;
+  bottom: 30rpx;
+  right: 15rpx;
+  z-index: 1000;
+}
+.toast{
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}

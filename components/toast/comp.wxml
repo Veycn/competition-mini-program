@@ -1,0 +1,11 @@
+<!--components/toast/comp.wxml-->
+<view class="toast">
+  <view class="toast-content" style="height: {{height ? height + 'rpx' : '500rpx'}}">
+    <view class="tc-close" bindtap="onClose">
+      <image src="/img/public/close.png" class="icon" />
+    </view>
+    <view class="tc-main">
+      <slot class="main"></slot>
+    </view>
+  </view>
+</view>

@@ -41,7 +41,7 @@
   </view>
   <view class="about">
     <block wx:for="{{list}}" wx:key="index">
-      <view class="about-item">
+      <view class="about-item" bindtap="jumpPage" data-url="{{item.url}}">
         <view class="item">
           <image src="{{item.icon}}" class="item-icon" />
           <text class="title">{{item.title}}</text>

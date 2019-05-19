@@ -1,14 +1,22 @@
 {
   "pages": [
+    "pages/myteam/index",
+    "pages/message/index",
+    "pages/detail/index",
+    "pages/list/index",
     "pages/main/index",
     "pages/index/index",
     "pages/mine/index",
     "pages/login/index",
     "pages/register/index",
-    "pages/list/index",
     "pages/logs/logs",
-    "pages/message/index",
-    "pages/info/index"
+    "pages/info/index",
+    "pages/search/index",
+    "pages/myrace/index",
+    "pages/memberinfo/index",
+    "pages/contact/index",
+    "pages/feedback/index",
+    "pages/applylist/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -29,7 +37,7 @@
       },
       {
         "pagePath": "pages/message/index",
-        "text": "消息",
+        "text": "广场",
         "iconPath": "img/public/msg.png",
         "selectedIconPath": "img/public/msg_select.png"
       },

@@ -1,0 +1,21 @@
+<!-- pages/personbaseinfo/index.wxml -->
+<view class="personinfo">
+  <view class="content">
+    <view class="title">基本信息</view>
+    <view class="avatar">
+      <image class="v-img" src="{{userInfo.image}}" />
+    </view>
+    <view class="li">姓名：{{userInfo.name}}</view>
+    <view class="li">
+      性别：{{userInfo.sex == 'male' ? 'nan': userInfo.sex == 'female' ? 'nv' : '未知'}}
+    </view>
+    <view class="li">年级：{{userInfo.grade}}</view>
+    <view class="li">学校：{{userInfo.school}}</view>
+    <view class="li">专业：{{userInfo.major}}</view>
+    <view class="li">标签：{{userInfo.tag}}</view>
+    <view class="btn">
+      <view class="b" bindtap="nextStep" data-flag="no">看看其他</view>
+      <view class="b" bindtap="nextStep" data-flag="yes">发送邀请</view>
+    </view>
+  </view>
+</view>

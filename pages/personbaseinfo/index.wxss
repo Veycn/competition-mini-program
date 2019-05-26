@@ -1,0 +1,48 @@
+/* pages/personbaseinfo/index.wxss */
+.personinfo {
+  width: 100%;
+  height: 100%;
+  background: #f8f8f8;
+  box-sizing: border-box;
+  padding: 15rpx;
+}
+
+.content{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 15rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  position: relative;
+}
+.avatar {
+  width: 200rpx;
+  height: 200rpx;
+  margin: 30rpx 0;
+}
+.title{
+  width: 100%;
+  line-height: 60rpx;
+  text-align: center;
+  text-shadow: 0 0 4rpx #ccc;
+}
+.li {
+  font-size: 36rpx;
+  color: #666666;
+}
+
+.btn {
+  position: absolute;
+  bottom: 20rpx;
+  width: 690rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.btn > .b {
+  width: 300rpx;
+  background: #111;
+  color: #ccb458;
+  border-radius: 10rpx;
+  text-align: center;
+}

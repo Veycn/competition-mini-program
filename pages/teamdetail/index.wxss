@@ -1,0 +1,59 @@
+/* pages/teamdetail/index.wxss */
+.teamdetail {
+  width: 100%;
+  height: 100%;
+  background: #f8f8f8;
+  padding: 15rpx;
+  box-sizing: border-box;
+}
+.info{
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 10rpx;
+  box-shadow: 0 0 6rpx #ccc;
+  box-sizing: border-box;
+  padding: 20rpx;
+  position: relative;
+}
+.team > .teamname{
+  width: 100%;
+  line-height: 60rpx;
+  text-align: center;
+}
+.team > .number {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.team > .number > view{
+  text-align: center;
+  flex: 1;
+}
+.leader {
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.leader > .title {
+  text-align: center;
+}
+
+.btn{
+  width: 680rpx;
+  position: absolute;
+  bottom: 25rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn > view {
+  width: 600rpx;
+  text-align: center;
+  background: #111;
+  color: #ccb458;
+  border-radius: 10rpx;
+  margin-bottom: 15rpx;
+}

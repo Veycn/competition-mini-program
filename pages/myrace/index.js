@@ -29,7 +29,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.request({
+      url: 'http://localhost:9009/race/queryallrace',
+      success: res => {
+        console.log(res)
+        if(res.data.success){
+          this.setData({
+            list: res.data.data
+          })
+        }
+      }
+    })
   },
 
   /**

@@ -7,19 +7,21 @@ Page({
     wx.showLoading({
       title: 'loading...',
     })
+    wx.request({
+      url: `http://localhost:9009/race/queryallrace`,
+      success: res => {
+        console.log(res.data.data)
+        this.setData({
+          list: res.data.data
+        })
+      }
+    })
   },
   onReady() {
     wx.hideLoading()
   },
   data: {
-    list: [
-      { imgUrl: '/img/public/cup.png', title: '华为杯', startTime: '2019.05.11-12:00', endTime: '2019.05.11-12:00', types: '工程机械， 计算机， 编程', id: '12345' },
-      { imgUrl: '/img/public/cup.png', title: '未来杯', startTime: '2019.05.11-12:00', endTime: '2019.05.11-12:00', types: '工程机械， 计算机， 编程', id: '12345' },
-      { imgUrl: '/img/public/cup.png', title: '挑战杯', startTime: '2019.05.11-12:00', endTime: '2019.05.11-12:00', types: '工程机械， 计算机， 编程', id: '12345' },
-      { imgUrl: '/img/public/cup.png', title: '数模大赛', startTime: '2019.05.11-12:00', endTime: '2019.05.11-12:00', types: '工程机械， 计算机， 编程', id: '12345' },
-      { imgUrl: '/img/public/cup.png', title: 'ACM编程大赛', startTime: '2019.05.11-12:00', endTime: '2019.05.11-12:00', types: '工程机械， 计算机， 编程', id: '12345' },
-    ],
-
+    list: [],
     imgUrls: [
       '/img/public/banner.jpg',
       '/img/public/banner.jpg',
@@ -56,7 +58,7 @@ Page({
     wx.navigateTo({ url: `/pages/${url}/index` })
   },
   jumpDetail(e){
-    let id = e.currentTarget.dataset.id
+    let id= e.currentTarget.dataset.id
     console.log(id)
     wx.navigateTo({ url: `/pages/detail/index?raceid=${id}` })
   }

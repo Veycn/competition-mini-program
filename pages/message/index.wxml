@@ -1,29 +1,34 @@
 <!-- pages/message/index.wxml -->
 <view class="page">
   <view class="page__bd">
-    <view class="weui-tab">
-      <view class="weui-navbar">
+    <view class="weui-tab bg">
+      <view class="weui-navbar top">
         <block wx:for="{{tabs}}" wx:key="*this">
           <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on active' : ''}}" bindtap="tabClick">
             <view class="weui-navbar__title">{{item}}</view>
           </view>
         </block>
       </view>
-      <view class="weui-tab__panel">
+      <view class="weui-tab__panel" style="z-index: -1;">
         <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
           <view class="find-member">
-            找团队
+            <view class="list-item" wx:for="{{pList}}" wx:key="index" bindtap="showDetail" data-userid="{{item.userid}}">
+              <view class="racename">比赛：{{item.competition}}</view>
+              <view class="forward">期望：{{item.requirements}}</view>
+              <view class="cando">我能做：<text class="can">{{item.cando}}</text></view>
+            </view>
             <v-float class="float" bindtap="add" data-tag="member" />
           </view>
         </view>
         <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
           <view class="find-team">
-            找个人
+            <view class="list-item" wx:for="{{tList}}" wx:key="index">
+              <view class="racename">比赛：{{item.competition}}</view>
+              <view class="forward">期望：{{item.requirements}}</view>
+              <view class="cando">我们：<text class="can">{{item.advantage}}</text></view>
+            </view>
             <v-float class="float" bindtap="add" data-tag="team" />
           </view>
-        </view>
-        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
-          <view class="just-see-see">随便看看</view>
         </view>
       </view>
     </view>
@@ -34,6 +39,8 @@
         <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
           <view class="picker">目标比赛: {{array[index]}}</view>
         </picker>
+        <view class="picker" >你在此比赛中的角色？</view>
+        <input type="text" bindinput="roleInput" class="ipt" placeholder=""/>
         <textarea bindinput="forwardInput" class="ipt ta" type="text" placeholder="你对团队/队友有什么期望？" />
         <view class="tips">Tips: 你的个人标签将作为你的强项提交， 可以随时去个人中心修改～</view>        
         <view class="release" catchtap="release" data-tag="member">发布</view>

@@ -1,27 +1,27 @@
-<!--components/list/comp.wxml-->
+<!-- components/list/comp.wxml -->
 <view class="content-item" bindtap="jumpToDetail" url="">
-          <view class="">
-            <image src="/img/public/cup.png" class="c-img" />
-          </view>
-          <view class="overview">
-            <view class="c-header">
-              <text class="short-call">{{item.title}}</text>
-            </view>
-            <view class="type">
-              <view class="c-info">
-                <text class="t-default">赛事类型：</text>
-                <text class="t-small">{{item.types}}</text>
-              </view>
-              <view class="time">
-                <view>
-                  <text class="t-default">开始报名：</text>
-                  <text class="t-warn">{{item.startTime}}</text>
-                </view>
-                <view>
-                  <text class="t-default">报名截止：</text>
-                  <text class="t-warn">{{item.endTime}}</text>
-                </view>
-              </view>
-            </view>
-          </view>
+  <view class="">
+    <image src="{{item.img}}" class="c-img" />
+  </view>
+  <view class="overview">
+    <view class="c-header">
+      <text class="short-call">{{item.name}}</text>
+    </view>
+    <view class="type">
+      <view class="c-info">
+        <text class="t-default">赛事类型：</text>
+        <text class="t-small">{{item.keywords}}</text>
+      </view>
+      <view class="time">
+        <view>
+          <text class="t-default">开始报名：</text>
+          <text class="t-warn">{{item.signup1}}</text>
         </view>
+        <view>
+          <text class="t-default">报名截止：</text>
+          <text class="t-warn">{{item.signup2}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,4 +1,3 @@
-<!-- index.wxml -->
 <view class="container">
   <view class="filter">
     <view class="">
@@ -28,7 +27,7 @@
   </view>
   <view class="list">
     <block wx:for="{{list}}" wx:key="index">
-      <v-list item="{{item}}" />
+      <v-list item="{{item}}" catchtap="jumpDetail" data-id="{{item.id}}"/>
     </block>
   </view>
 </view>

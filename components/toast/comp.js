@@ -6,8 +6,7 @@ Component({
   properties: {
     // 指定弹窗的高度
     height: {
-      type: Number,
-      default: 400
+      type: Number
     },
     title: String
   },

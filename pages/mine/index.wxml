@@ -12,7 +12,7 @@
         </view>
         <view class="t-default fs-12">
           性别：
-          <text class="fs-12 t-normal">{{user.sex == 'male' ? '男' : '女'}}</text>
+          <text class="fs-12 t-normal">{{user.sex == 'male' ? '男' : user.sex == 'female' ? '女':'未知'}}</text>
         </view>
       </view>
       <view class="info">
@@ -22,7 +22,7 @@
         </view>
         <view class="t-default fs-12">
           学号：
-          <text class="fs-12 t-normal">{{user.num}}</text>
+          <text class="fs-12 t-normal">{{user.stuid}}</text>
         </view>
       </view>
       <view class="info">

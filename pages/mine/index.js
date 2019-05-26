@@ -10,7 +10,6 @@ Page({
       {icon: '/img/mine/myc.png', title: '修改信息', url: 'myinfo'},
       {icon: '/img/mine/team.png', title: '我的队伍', url: 'myteam'},
       {icon: '/img/mine/add.png', title: '寻找队友', url: 'message'},
-      {icon: '/img/mine/want.png', title: '个人意向', url: '??'},
       {icon: '/img/mine/want.png', title: '联系我们', url: 'contact'},
       {icon: '/img/mine/want.png', title: '意见反馈', url: 'feedback'},
     ],
@@ -36,7 +35,20 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    wx.request({
+      url: 'http://localhost:9009/user/getmyinfo',
+      data: {id: 6},
+      success: res => {
+        console.log(res)
+        this.setData({
+          user: res.data.data
+        })
+        wx.setStorage({
+          key: 'user',
+          data: res.data.data
+        })
+      }
+    })
   },
 
   /**

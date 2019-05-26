@@ -1,6 +1,4 @@
 /* pages/detail/index.wxss */
-
-
 .banner{
   width: 100%;
 }

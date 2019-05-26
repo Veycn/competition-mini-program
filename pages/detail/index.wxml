@@ -1,24 +1,60 @@
-<!--pages/detail/index.wxml-->
+<!-- pages/detail/index.wxml -->
 <view class="detail">
   <view class="banner">
-    <image src="/img/public/cup.png" mode="widthFix" class="img"/>
+    <image src="{{raceInfo.img}}" mode="widthFix" class="img" />
   </view>
   <view class="content">
     <view class="desc">
-      <view class="title"><text ></text></view>
-      <view class="subhead">主办单位：<text ></text></view>
-      <view class="subhead">承办单位：<text ></text></view>
-      <view class="subhead">决赛会场：<text ></text></view>
-      <view class="subhead">报名时间：<text ></text></view>
-      <view class="subhead">报名截止：<text ></text></view>
-      <view class="subhead">初赛时间：<text ></text></view>
-      <view class="subhead">决赛时间：<text ></text></view>
-      <view class="subhead">参赛要求：<text >详见附件。</text></view>
+      <view class="title">
+        <text></text>
+      </view>
+      <view class="subhead">
+        赛事名称：
+        <text>{{raceInfo.name}}</text>
+      </view>
+      <view class="subhead">
+        主办单位：
+        <text>{{raceInfo.hosts}}</text>
+      </view>
+      <view class="subhead">
+        报名时间：
+        <text>{{raceInfo.signup1}}</text>
+      </view>
+      <view class="subhead">
+        报名截止：
+        <text>{{raceInfo.signup2}}</text>
+      </view>
+      <view class="subhead">
+        初赛时间：
+        <text>{{raceInfo.time1}}</text>
+      </view>
+      <view class="subhead">
+        决赛时间：
+        <text>{{raceInfo.time2}}</text>
+      </view>
+      <view class="subhead">
+        参赛要求：
+        <text>{{raceInfo.description}}</text>
+      </view>
     </view>
     <view class="file"></view>
   </view>
   <view class="control">
-    <button class="btn" bindtap="download"><text >下载文件</text></button>
-    <button class="btn" bindtap="addItem"><text >添加到我的比赛</text></button>
+    <view class="btn" bindtap="download">
+      <text style="flex: 1;">下载文件</text>
+    </view>
+    <view class="btn">
+      <text class="" catchtap="addItem" data-flag="create">创建队伍</text>
+      <text class="" catchtap="addItem" data-flag="search">寻找队伍</text>
+    </view>
   </view>
+  <v-toast wx:if="{{isShow}}" title="{{'创建队伍'}}" bindtoastClose="toastClose" class="toast" height="{{380}}">
+    <view slot="main">
+      <view class="_title">请输入队伍名称：</view>
+      <input type="text" bindinput="teamnameInput" class="ipt" />
+      <view class="_title">队伍需求人数：</view>
+      <input type="number" bindinput="numberInput" class="ipt" placeholder="请输入一个数字～"/>
+      <view class="_btn" catchtap="createTeam">确认创建</view>
+    </view>
+  </v-toast>
 </view>

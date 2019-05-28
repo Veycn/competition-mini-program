@@ -22,13 +22,15 @@
     "pages/myinfo/index",
     "pages/aboutme/index",
     "pages/teamdetail/index",
-    "pages/personbaseinfo/index"
+    "pages/personbaseinfo/index",
+    "pages/myteamlist/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTitleText": "学科竞赛",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {

@@ -1,0 +1,6 @@
+<!-- components/none/comp.wxml -->
+<view class="none">
+  <image src="/img/public/none.png" class="none-img" />
+  <view class="tips">{{desc}}</view>
+  <view class="tr" catchtap="toRecruit" wx:if="{{showBtn}}">去发布招募信息</view>
+</view>

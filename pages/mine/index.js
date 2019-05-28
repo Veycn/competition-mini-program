@@ -5,22 +5,15 @@ Page({
    * Page initial data
    */
   data: {
-    list: [
-      {icon: '/img/mine/myc.png', title: '我的比赛', url: 'myrace'},
-      {icon: '/img/mine/myc.png', title: '修改信息', url: 'myinfo'},
-      {icon: '/img/mine/team.png', title: '我的队伍', url: 'myteam'},
+    arr: [
+      {icon: '/img/mine/mine.png', title: '我的信息', url: 'myinfo'},
+      // {icon: '/img/mine/myc.png', title: '我的比赛', url: 'myrace'},
+      {icon: '/img/mine/team.png', title: '我的队伍', url: 'myteamlist'},
       {icon: '/img/mine/add.png', title: '寻找队友', url: 'message'},
       {icon: '/img/mine/want.png', title: '联系我们', url: 'contact'},
-      {icon: '/img/mine/want.png', title: '意见反馈', url: 'feedback'},
+      {icon: '/img/mine/fb.png', title: '意见反馈', url: 'feedback'},
     ],
-    user: {
-      name: '杨小平',
-      sex: 'male',
-      num: 2016211624,
-      grade: '2016',
-      school: '重庆邮电大学',
-      major: '智能科学与技术'
-    }
+    user: {}
   },
 
   jumpPage(e){
@@ -35,11 +28,15 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    this._getMyInfo()
+    this._getAllMyTeam()
+  },
+
+  _getMyInfo(){
     wx.request({
       url: 'http://localhost:9009/user/getmyinfo',
       data: {id: 6},
       success: res => {
-        console.log(res)
         this.setData({
           user: res.data.data
         })
@@ -50,7 +47,16 @@ Page({
       }
     })
   },
-
+  _getAllMyTeam(){
+    wx.request({
+      url: "http://localhost:9009/team/queryallmyteam",
+      data: {id: 6},
+      success: res => {
+        this.setData({list: res.data.data})
+        wx.setStorage({key: 'myTeams',data: res.data.data})
+      }
+    })
+  },
   /**
    * Lifecycle function--Called when page is initially rendered
    */

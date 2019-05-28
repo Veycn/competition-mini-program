@@ -108,9 +108,9 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  border: 1px solid #ccc;
   box-sizing: border-box;
   padding-left: 50rpx;
+  background: #fff;
 }
 .modify > .btn-b{
   width: 650rpx;

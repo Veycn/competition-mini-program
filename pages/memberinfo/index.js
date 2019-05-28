@@ -13,9 +13,19 @@ Page({
    */
   onLoad: function (options) {
     console.log(options)
-    this.setData({memberid: options.memberid})
+    let memberid = options.memberid
+    this.setData({memberid})
     // 网络请求， 获取成员数据
-    // wx.request({})
+    wx.request({
+      url: "http://localhost:9009/user/getmemberinfo",
+      data: {id: memberid},
+      success: res => {
+        console.log(res.data)
+        if(res.data.success){
+          this.setData({userInfo: res.data.data})
+        }
+      }
+    })
   },
 
   /**

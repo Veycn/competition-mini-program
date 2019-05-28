@@ -19,19 +19,19 @@
         <image src="/img/public/comp.png" class="icon"/>
         <text class="text">发现赛事</text>
       </view>
-      <view class="item" bindtap="jumpPage" data-url="myteam">
+      <view class="item" bindtap="jumpPage" data-url="myteamlist">
         <image src="/img/public/add.png" class="icon"/>
         <text class="text">我的团队</text>
       </view>
     </view>
     <view class="row">
-      <view class="item" bindtap="jumpPage" data-url="myrace">
+      <view class="item"  data-url="myrace">
         <image src="/img/public/list.png" class="icon"/>
-        <text class="text">我的大赛</text>
+        <text class="text">预留入口</text>
       </view>
-      <view class="item" bindtap="jumpPage" data-url="learn">
+      <view class="item" data-url="learn">
         <image src="/img/public/learn.png" class="icon"/>
-        <text class="text">学习充电</text>
+        <text class="text">预留入口</text>
       </view>
     </view>
   </view>

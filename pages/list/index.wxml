@@ -13,7 +13,6 @@
       <text class="t-default fs-16">赛事类型：</text>
       <block wx:for="{{types}}" wx:key="index">
         <text class="filter-item {{index==active?'filter-item-active':''}}"
-              bindtap="changeClass"
               data-tag="type"
               data-index="{{index}}">{{item}}</text>
       </block>
@@ -25,9 +24,12 @@
       <text class="t-normal fs-14">搜索</text>
     </view>
   </view>
-  <view class="list">
+  <view class="list" wx:if="{{list.length}}">
     <block wx:for="{{list}}" wx:key="index">
       <v-list item="{{item}}" catchtap="jumpDetail" data-id="{{item.id}}"/>
     </block>
+  </view>
+  <view wx:else class="noitem">
+    <v-none desc="{{'这里没有你要找的信息～'}}"></v-none>
   </view>
 </view>

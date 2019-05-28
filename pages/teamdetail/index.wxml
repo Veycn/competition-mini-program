@@ -2,7 +2,7 @@
 <view class="teamdetail">
   <view class="info">
     <view class="team">
-      <view class="teamname">{{teamInfo.name}} 小队</view>
+      <view class="teamname title">{{teamInfo.name}} 小队</view>
       <view class="number">
         <view class="need">需求人数：{{teamInfo.number}}</view>
         <view class="current">当前已有：{{teamInfo.current}}</view>
@@ -14,7 +14,7 @@
         <view class="">
           <view class="need">姓名：{{leaderInfo.name}}</view>
           <view class="current">
-            性别：{{leaderInfo.sex == 'male' ? 'nan': leaderInfo.sex == 'female' ? 'nv' : '未知'}}
+            性别：{{leaderInfo.sex == 'male' ? '男': leaderInfo.sex == 'female' ? '女' : '未知'}}
           </view>
           <view class="need">学校：{{leaderInfo.school}}</view>
           <view class="current">年级：{{leaderInfo.grade}}</view>
@@ -23,6 +23,7 @@
         </view>
       </view>
     </view>
+    <view class="need" style="margin-top: 20rpx;">比赛：{{teamInfo.competition}}</view>
     <view class="btn">
       <view class="yes" data-flag="yes" catchtap="ontap">我想加入</view>
       <view class="no" data-flag="holdon" catchtap="ontap">稍后处理</view>

@@ -34,4 +34,6 @@ page{
   box-sizing: border-box;
   padding: 15rpx;
   background: #fff;
+  border-radius: 15rpx;
+  min-height: 880rpx;
 }

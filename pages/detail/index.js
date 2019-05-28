@@ -62,22 +62,37 @@ Page({
       method: 'POST',
       data: {name: teamname, number, leader: userid, competition},
       success: res => {
-        console.log(res)
         if(res.data.success){
+          let teaminfo = res.data.data
+          let {id, name, leader} = teaminfo
           wx.showToast({
             title: '队伍创建成功！',
             icon: 'none',
             duration: 2000
           })
-          wx.navigateTo({url: '/pages/myteam/index'})
+          console.log(teaminfo)
+          setTimeout(() => {
+            this.toastClose()
+            wx.navigateTo({
+              url: `/pages/myteam/index?teamid=${id}&leader=${leader}&teamname=${name}&isLeader=${true}&userid=${userid}`
+            })
+          }, 2000)
         }else{
+          let teaminfo = res.data.data
+          let {id, name, leader} = teaminfo
           wx.showToast({
-            title: '队伍创建失败！',
+            title: '你已经创建该比赛的队伍！',
             icon: 'none',
             duration: 2000
           })
+          console.log(teaminfo)
+          setTimeout(() => {
+            this.toastClose()
+            wx.navigateTo({
+              url: `/pages/myteam/index?teamid=${id}&leader=${leader}&teamname=${name}&isLeader=${true}&userid=${userid}`
+            })
+          }, 2000)
         }
-        this.toastClose()
       }
     })
   },

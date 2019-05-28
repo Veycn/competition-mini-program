@@ -7,7 +7,7 @@ Page({
   data: {
     userinfo: {
       avatar: '/img/avatar.jpg',
-      name: '杨小平', sex: '男',
+      name: '杨小平', sex: 'male',
       grade: '2016', school: '重庆邮电大学',
       major: '智能科学与技术', phone: '17784450729',
       num: '2016211624', qq: '1594325241'
@@ -17,7 +17,7 @@ Page({
       name: '姓名', sex: '性别',
       grade: '年级', school: '学校',
       major: '专业', phone: '电话',
-      num: '学号', qq: 'Q Q'
+      stuid: '学号', qq: 'Q Q'
     },
     tags: ['创新', 'C++', 'C', 'Python', '论文', 'ACM', '编程'],
     isInfoToastShow: false,
@@ -51,16 +51,25 @@ Page({
   },
   tagInput(e){
     let tags = e.detail.value.replace(/(\，)/g, ',').split(",")
-    
     this.setData({tags})
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getMyInfo()
   },
 
+  getMyInfo(){
+    wx.getStorage({
+      key: 'user',
+      success: res => {
+        console.log(res.data)
+        let {name, sex, school, grade, major, stuid, phone, qq} = res.data
+        this.setData({userinfo: {name, sex, school, grade, major, stuid, phone, qq}})
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

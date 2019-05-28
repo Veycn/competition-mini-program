@@ -50,8 +50,8 @@ page{
 }
 
 .filter-item {
-  padding: 4rpx 20rpx;
-  margin: 0 10rpx;
+  padding: 4rpx 10rpx;
+  margin: 0 5rpx;
   border-radius: 10rpx;
   display: inline-block;
   line-height: 1;

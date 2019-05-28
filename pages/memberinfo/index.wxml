@@ -1,2 +1,21 @@
-<!--pages/memberinfo/index.wxml-->
-<text>pages/memberinfo/index.wxml</text>
+<view class="personinfo">
+  <view class="content">
+    <view class="title">基本信息</view>
+    <view class="avatar">
+      <image class="v-img" src="{{userInfo.image}}" />
+    </view>
+    <view class="li">姓名：{{userInfo.name}}</view>
+    <view class="li">
+      性别：{{userInfo.sex == 'male' ? '男': userInfo.sex == 'female' ? '女' : '未知'}}
+    </view>
+    <view class="li">年级：{{userInfo.grade}}</view>
+    <view class="li">学校：{{userInfo.school}}</view>
+    <view class="li">专业：{{userInfo.major}}</view>
+    <view class="li">学号：{{userInfo.stuid}}</view>
+    <view class="li">强项：{{userInfo.tag}}</view>
+    <view class="title">联系方式</view>
+    <view class="li">电话：{{userInfo.phone}}</view>
+    <view class="li">Q Q：{{userInfo.qq}}</view>
+    <view class="li">邮箱：{{userInfo.email}}</view>
+  </view>
+</view>

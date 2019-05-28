@@ -3,12 +3,12 @@
   <view class="list" wx:if="{{true}}">
     <view class="item" wx:for="{{list}}" wx:key="index"
           bindtap="showDetail" data-index="{{index}}">
-      <view class="avatar">
-        <image class="v-img" src="/img/avatar.jpeg"/>
+      <view class="v-icon">
+        <image class="v-img" src="/img/public/newmsg.png"/>
       </view>
       <view class="msg">
-        <view class="name">{{item.sender}}</view>
-        邀请你加入他的队伍！</view>
+        <text class="name">{{item.sender}} </text> 邀请你加入他的队伍！
+      </view>
       <view class="more">查看详情</view>
     </view>
   </view>

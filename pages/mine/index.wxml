@@ -2,7 +2,7 @@
 <view class="mine">
   <view class="mine-info">
     <view class="avatar">
-      <image src="/img/avatar.jpeg" class="avatar-img" />
+      <image src="{{user.image}}" class="avatar-img" />
     </view>
     <view class="mi-detail">
       <view class="info">
@@ -40,7 +40,7 @@
     </view>
   </view>
   <view class="about">
-    <block wx:for="{{list}}" wx:key="index">
+    <block wx:for="{{arr}}" wx:key="index">
       <view class="about-item" bindtap="jumpPage" data-url="{{item.url}}">
         <view class="item">
           <image src="{{item.icon}}" class="item-icon" />

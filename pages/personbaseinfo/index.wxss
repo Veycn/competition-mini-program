@@ -5,6 +5,7 @@
   background: #f8f8f8;
   box-sizing: border-box;
   padding: 15rpx;
+  position: relative;
 }
 
 .content{
@@ -45,4 +46,23 @@
   color: #ccb458;
   border-radius: 10rpx;
   text-align: center;
+}
+
+.s-toast{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.s-toast .btna{
+  width: 680rpx;
+  height: 60rpx;
+  background: #111;
+  color: #ccb458;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 10rpx;
+  margin-top: 30rpx;
 }

@@ -7,7 +7,7 @@
     </view>
     <view class="li">姓名：{{userInfo.name}}</view>
     <view class="li">
-      性别：{{userInfo.sex == 'male' ? 'nan': userInfo.sex == 'female' ? 'nv' : '未知'}}
+      性别：{{userInfo.sex == 'male' ? '男': userInfo.sex == 'female' ? '女' : '未知'}}
     </view>
     <view class="li">年级：{{userInfo.grade}}</view>
     <view class="li">学校：{{userInfo.school}}</view>
@@ -18,4 +18,12 @@
       <view class="b" bindtap="nextStep" data-flag="yes">发送邀请</view>
     </view>
   </view>
+  <v-toast class="s-toast" height="{{300}}" bindtoastClose="toastClose" wx:if="{{isToastShow}}" title="发送邀请">
+    <view slot="main">
+      <picker bindchange="bindPickerChange" value="{{pickIndex}}" range="{{pickArr}}">
+        <view class="picker">目标比赛: {{pickArr[pickIndex]}}</view>
+      </picker>
+      <view class="btna" catchtap="send">确认发送</view>
+    </view>
+  </v-toast>
 </view>

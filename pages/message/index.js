@@ -21,7 +21,6 @@ Page({
     index: 0
   },
   bindPickerChange(e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       index: e.detail.value
     })
@@ -34,7 +33,6 @@ Page({
   },
 
   add(e) {
-    console.log(e)
     let tag = e.currentTarget.dataset.tag
     let { activeIndex } = this.data
     if (activeIndex == 0) {
@@ -46,7 +44,6 @@ Page({
   },
 
   toastClose() {
-    console.log('close')
     this.setData({ isToastHidden: false })
   },
 
@@ -108,6 +105,9 @@ Page({
     console.log(e)
     let userid = e.currentTarget.dataset.userid
     wx.navigateTo({url: `/pages/personbaseinfo/index?userid=${userid}`})
+  },
+  showTeam(){
+    console.log("查看队伍详情， 确定是否有意向加入～")
   },
   /**
    * Lifecycle function--Called when page load
@@ -186,7 +186,9 @@ Page({
    * Page event handler function--Called when user drop down
    */
   onPullDownRefresh: function () {
-
+    console.log("下拉刷新个人信息团队信息～")
+    this.getAllPersonalMsg()
+    this.getAllTeamMsg()
   },
 
   /**

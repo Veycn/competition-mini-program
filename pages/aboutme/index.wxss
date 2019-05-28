@@ -16,10 +16,9 @@
   justify-content: center;
   align-items: center;
 }
-.aboutme > .list > .item > .avatar {
-  width: 120rpx;
-  height: 120rpx;
-  border-radius: 10rpx;
+.aboutme > .list > .item > .v-icon {
+  width: 70rpx;
+  height: 70rpx;
   margin-right: 20rpx;
 }
 .aboutme > .list > .item > .msg {

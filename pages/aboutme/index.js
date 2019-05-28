@@ -13,13 +13,17 @@ Page({
   showDetail (e) {
     let index = e.currentTarget.dataset.index
     let teamid = this.data.list[index].teamid
+    let inviteId = this.data.list[index].id
     console.log(teamid)
-    wx.navigateTo({url: `/pages/teamdetail/index?teamid=${teamid}`})
+    wx.navigateTo({url: `/pages/teamdetail/index?teamid=${teamid}&inviteId=${inviteId}`})
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.getMyInvitation()
+  },
+  getMyInvitation(){
     wx.request({
       url: "http://localhost:9009/msg/getallmyinvitation",
       data: {id: 6, flag: 4},
@@ -31,7 +35,6 @@ Page({
       }
     })
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -64,7 +67,8 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    console.log('下拉刷新我的邀请～')
+    this.getMyInvitation()
   },
 
   /**

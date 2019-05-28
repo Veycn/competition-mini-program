@@ -48,7 +48,7 @@
       <text class="" catchtap="addItem" data-flag="search">寻找队伍</text>
     </view>
   </view>
-  <v-toast wx:if="{{isShow}}" title="{{'创建队伍'}}" bindtoastClose="toastClose" class="toast" height="{{380}}">
+  <v-toast wx:if="{{isShow}}" title="{{'创建队伍'}}" bindtoastClose="toastClose" class="toast" height="{{520}}">
     <view slot="main">
       <view class="_title">请输入队伍名称：</view>
       <input type="text" bindinput="teamnameInput" class="ipt" />

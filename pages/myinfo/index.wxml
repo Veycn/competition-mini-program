@@ -14,7 +14,7 @@
       </view>
       <view class="item">
         <text class="title">性别：</text>
-        <text class="msg">{{userinfo.sex}}</text>
+        <text class="msg">{{userinfo.sex == 'male' ? '男':userinfo.sex=='female'? '女':'未知'}}</text>
       </view>
     </view>
     <view class="item-row">
@@ -34,7 +34,7 @@
       </view>
       <view class="item">
         <text class="title">学号：</text>
-        <text class="msg">{{userinfo.num}}</text>
+        <text class="msg">{{userinfo.stuid}}</text>
       </view>
     </view>
     <view class="item-row">

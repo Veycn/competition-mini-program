@@ -1,0 +1,8 @@
+<!--pages/myteamlist/index.wxml-->
+<view class="myteamlist">
+  <view class="item" wx:for="{{list}}" catchtap="toTeam" data-index="{{index}}" data-id="{{item.id}}" wx:key="index">
+    <view class="text">队伍名称：<text class="name">{{item.name}}</text></view>
+    <view class="text">所属比赛：<text >{{item.competition}}</text></view>
+    <view class="text">你的身份：<text class="">{{user.id == item.leader ? '队长':'队员'}}</text></view>
+  </view>
+</view>

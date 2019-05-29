@@ -66,3 +66,6 @@
   border-radius: 10rpx;
   margin-top: 30rpx;
 }
+.p-tn{
+  color: #ccb458;
+}

@@ -21,7 +21,7 @@
   <v-toast class="s-toast" height="{{300}}" bindtoastClose="toastClose" wx:if="{{isToastShow}}" title="发送邀请">
     <view slot="main">
       <picker bindchange="bindPickerChange" value="{{pickIndex}}" range="{{pickArr}}">
-        <view class="picker">目标比赛: {{pickArr[pickIndex]}}</view>
+        <view class="picker">邀请至: 我的 <text class="p-tn">{{pickArr[pickIndex]}}</text> 队伍</view>
       </picker>
       <view class="btna" catchtap="send">确认发送</view>
     </view>

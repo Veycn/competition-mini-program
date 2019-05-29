@@ -13,3 +13,50 @@
     </view>
   </view>
 </view>
+<!-- <view class="page">
+  <view class="page__bd">
+    <view class="weui-tab bg">
+      <view class="weui-navbar top">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on active' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+      </view>
+      <view class="weui-tab__panel" style="z-index: -1;">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <view class="aboutme">
+            <view class="list" wx:if="{{true}}">
+              <view class="item" wx:for="{{list}}" wx:key="index"
+                    bindtap="showDetail" data-index="{{index}}">
+                <view class="v-icon">
+                  <image class="v-img" src="/img/public/newmsg.png"/>
+                </view>
+                <view class="msg">
+                  <text class="name">{{item.sender}} </text> 邀请你加入他的队伍！
+                </view>
+                <view class="more">查看详情</view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}" >
+          <view class="aboutme">
+            <view class="list" wx:if="{{true}}">
+              <view class="item" wx:for="{{list}}" wx:key="index"
+                     data-index="{{index}}">
+                <view class="v-icon">
+                  <image class="v-img" src="/img/public/newmsg.png"/>
+                </view>
+                <view class="msg">
+                  <text class="name">{{item.sender}} </text> 申请你加入他的队伍！
+                </view>
+                <view class="more">查看详情</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view> -->

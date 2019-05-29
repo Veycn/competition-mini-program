@@ -70,6 +70,7 @@ Page({
             icon: 'none',
             duration: 2000
           })
+          this._getAllMyTeam()
           console.log(teaminfo)
           setTimeout(() => {
             this.toastClose()
@@ -93,6 +94,16 @@ Page({
             })
           }, 2000)
         }
+      }
+    })
+  },
+  _getAllMyTeam(){
+    wx.request({
+      url: "http://localhost:9009/team/queryallmyteam",
+      data: {id: 6},
+      success: res => {
+        this.setData({list: res.data.data})
+        wx.setStorage({key: 'myTeams',data: res.data.data})
       }
     })
   },

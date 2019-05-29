@@ -27,7 +27,7 @@
     <view class="row">
       <view class="item"  data-url="myrace">
         <image src="/img/public/list.png" class="icon"/>
-        <text class="text">预留入口</text>
+        <text class="text">个人赛事</text>
       </view>
       <view class="item" data-url="learn">
         <image src="/img/public/learn.png" class="icon"/>

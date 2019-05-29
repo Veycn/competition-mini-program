@@ -6,12 +6,7 @@ Page({
    */
   data: {
     isNoticeShow: true,
-    applylist: [
-      {avatar: '/img/avatar.jpg', tname: '我来当分母', name: '杨小平', major: '智能科学与技术', grade: '2016', id:'123748'},
-      {avatar: '/img/avatar.jpg', tname: '我来当分母', name: '杨玄烛', major: '计算机科学与技术', grade: '2016', id:'123748'},
-      {avatar: '/img/avatar.jpg', tname: '我来当分母', name: '刘凯', major: '软件工程', grade: '2016', id:'123748'},
-      {avatar: '/img/avatar.jpg', tname: '我来当分母', name: '冉凯', major: '信息安全', grade: '2016', id:'123748'},
-    ]
+    applylist: []
   },
 
   closeNotice(e){
@@ -20,8 +15,18 @@ Page({
   },
   agreeJoin(e){
     let index = e.currentTarget.dataset.index
-    let {applylist} = this.data
-    console.log("同意" + applylist[index].name + "加入队伍～")
+    let {applylist, teamid} = this.data
+    let userid = applylist[index].id
+    let type = 1
+    console.log("同意" + applylist[index].name + "加入队伍～", userid, teamid)
+    
+    wx.showToast({
+      title: `同意${applylist[index].name}加入队伍～`,
+      icon: "none",
+      duration: 2000
+    })
+    // applylist.splice(index, 1)
+    // this.setData({applylist})
   },
   ignoreThis(e){
     let index = e.currentTarget.dataset.index
@@ -46,7 +51,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let teamid = options.teamid
+    this.setData({teamid})
+    wx.request({
+      url: 'http://localhost:9009/msg/getallmyteamapply',
+      data: {teamid},
+      success: res => {
+        console.log(res)
+        if(res.statusCode == 200){
+          this.setData({applylist: res.data.data.data})
+        }
+      }
+    })
   },
 
   /**

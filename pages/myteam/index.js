@@ -39,7 +39,7 @@ Page({
 
   // 查看申请加入队伍的列表
   applyList(e){
-    wx.navigateTo({url: '/pages/applylist/index'})
+    wx.navigateTo({url: `/pages/applylist/index?teamid=${this.data.teamid}`})
   },
   // 点击了队员list右边的按钮， 应该是想进行某些操作
   doSomething(e){
@@ -125,7 +125,7 @@ Page({
       data: {id: teamid},
       success: res => {
         console.log(res.data.data[0])
-        let members = res.data.data[0]
+        let {members} = res.data.data[0]
         console.log(members)
         this.getMembers(members)
       }

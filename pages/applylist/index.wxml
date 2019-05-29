@@ -5,10 +5,10 @@
     <block wx:for="{{applylist}}" wx:key="index">
       <view class="list-item" catchtap="showInfo" data-index="{{index}}">
         <view class="avatar-wrapper">
-          <image src="{{item.avatar}}" class="avatar" />
+          <image src="{{item.image}}" class="avatar" />
         </view>
         <view class="info">
-          <view class="a tn">{{item.tname}}</view>
+          <view class="a tn">{{item.name}}</view>
           <view class="a name fs">{{item.major}}</view>
           <view class="a ng fs">{{item.name}} {{item.grade}}</view>
         </view>

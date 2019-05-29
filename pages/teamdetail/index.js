@@ -105,25 +105,27 @@ Page({
         console.log(res)
         let teamInfo = res.data && res.data.data[0]
         console.log(teamInfo)
-        teamInfo.current = teamInfo.members.split(',').length + 1
+        teamInfo.current = teamInfo.members ? teamInfo.members.split(',').length + 1 : 1     
         let leader = teamInfo.leader
         this.setData({
           teamInfo: teamInfo
         })
-        wx.request({
-          url: 'http://localhost:9009/user/getmyinfo',
-          data: {id: leader},
-          success: res => {
-            console.log(res)
-            this.setData({
-              leaderInfo: res.data && res.data.data
-            })
-          }
+        this._getLeaderInfo(leader)
+      }
+    })
+  },
+  _getLeaderInfo(leader){
+    wx.request({
+      url: 'http://localhost:9009/user/getmyinfo',
+      data: {id: leader},
+      success: res => {
+        console.log(res)
+        this.setData({
+          leaderInfo: res.data && res.data.data
         })
       }
     })
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

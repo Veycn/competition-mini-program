@@ -5,10 +5,24 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list: []
+    list: [],
+    tabs: ["我的邀请", "申请加入"],
+    activeIndex: 0,
+    sliderOffset: 0,
+    sliderLeft: 0,
   },
 
-
+  bindPickerChange(e) {
+    this.setData({
+      index: e.detail.value
+    })
+  },
+  tabClick: function (e) {
+    this.setData({
+      sliderOffset: e.currentTarget.offsetLeft,
+      activeIndex: e.currentTarget.id
+    });
+  },
 
   showDetail (e) {
     let index = e.currentTarget.dataset.index

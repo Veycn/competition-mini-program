@@ -30,6 +30,7 @@ Page({
   onLoad: function (options) {
     this._getMyInfo()
     this._getAllMyTeam()
+    this._getStorage()
   },
 
   _getMyInfo(){
@@ -54,6 +55,14 @@ Page({
       success: res => {
         this.setData({list: res.data.data})
         wx.setStorage({key: 'myTeams',data: res.data.data})
+      }
+    })
+  },
+  _getStorage(){
+    wx.getStorage({
+      key: 'user',
+      success: res => {
+        this.setData({user: res.data})
       }
     })
   },

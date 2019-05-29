@@ -22,7 +22,7 @@
         </view>
         <view class="weui-tab__content" hidden="{{activeIndex != 1}}" >
           <view class="find-team">
-            <view class="list-item" wx:for="{{tList}}" wx:key="index" bindtap="showTeam">
+            <view class="list-item" wx:for="{{tList}}" wx:key="index" bindtap="showTeam" data-index="{{index}}">
               <view class="racename">比赛：{{item.competition}}</view>
               <view class="forward">期望：{{item.requirements}}</view>
               <view class="cando">我们：<text class="can">{{item.advantage}}</text></view>

@@ -23,7 +23,8 @@
     "pages/aboutme/index",
     "pages/teamdetail/index",
     "pages/personbaseinfo/index",
-    "pages/myteamlist/index"
+    "pages/myteamlist/index",
+    "pages/teamdetail_s/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

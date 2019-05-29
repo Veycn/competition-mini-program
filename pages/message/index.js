@@ -6,7 +6,7 @@ Page({
    * Page initial data
    */
   data: {
-    array: ['华为杯', '挑战杯', 'ACM大赛', '美国大学生数学建模大赛'],
+    array: ['第四届互联网+大赛', '华为杯', '挑战杯', 'ACM大赛', '美国大学生数学建模大赛'],
     tabs: ["个人意向", "团队招人"],
     activeIndex: 0,
     sliderOffset: 0,
@@ -59,7 +59,6 @@ Page({
     var self = this
     let competition = array[index]
     if (tag == 'member') {
-      
       wx.request({
         url: 'http://localhost:9009/msg/createpersonalmsg',
         method: 'POST',
@@ -106,7 +105,11 @@ Page({
     let userid = e.currentTarget.dataset.userid
     wx.navigateTo({url: `/pages/personbaseinfo/index?userid=${userid}`})
   },
-  showTeam(){
+  showTeam(e){
+    let index = e.currentTarget.dataset.index
+    let recruit = this.data.tList[index]
+    let {teamid, requirements, advantage, leader, competition} = recruit
+    wx.navigateTo({url: `/pages/teamdetail_s/index?teamid=${teamid}&requirements=${requirements}&advantage=${advantage}&leader=${leader}&competition=${competition}`})
     console.log("查看队伍详情， 确定是否有意向加入～")
   },
   /**

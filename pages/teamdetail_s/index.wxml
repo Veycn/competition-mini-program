@@ -1,0 +1,34 @@
+<!--pages/teamdetail_s/index.wxml-->
+<view class="teamdetail">
+  <view class="info">
+    <view class="team">
+      <view class="teamname title">{{teamInfo.name}} 小队</view>
+      <view class="number">
+        <view class="need">需求人数：{{teamInfo.number}}</view>
+        <view class="current">当前已有：{{teamInfo.current}}</view>
+      </view>
+    </view>
+    <view class="leader">
+      <view class="title">队长信息</view>
+      <view class="">
+        <view class="">
+          <view class="need">姓名：{{leaderInfo.name}}</view>
+          <view class="current">
+            性别：{{leaderInfo.sex == 'male' ? '男': leaderInfo.sex == 'female' ? '女' : '未知'}}
+          </view>
+          <view class="need">学校：{{leaderInfo.school}}</view>
+          <view class="current">年级：{{leaderInfo.grade}}</view>
+          <view class="need">专业：{{leaderInfo.major}}</view>
+          <view class="need">标签：{{leaderInfo.tag}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="need" style="margin-top: 20rpx;">比赛：{{params.competition}}</view>
+    <view class="need" style="margin-top: 20rpx;">优势：{{params.advantage}}</view>
+    <view class="need" style="margin-top: 20rpx;">需求：{{params.requirements}}</view>
+    <view class="btn">
+      <view class="yes" data-flag="yes" catchtap="ontap">发送申请</view>
+      <view class="no" data-flag="no" catchtap="ontap">看看其他</view>
+    </view>
+  </view>
+</view>
